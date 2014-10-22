@@ -1,0 +1,612 @@
+!SESSION 2014-10-10 01:29:35.498 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-10-10 01:30:12.758
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY org.eclipse.wb.core 4 4 2014-10-10 01:37:27.631
+!MESSAGE Designer [1.7.0.r37x201405021445.201410100137]: 0
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at javax.swing.plaf.basic.BasicTabbedPaneUI.paintTabArea(BasicTabbedPaneUI.java:842)
+	at javax.swing.plaf.basic.BasicTabbedPaneUI.paint(BasicTabbedPaneUI.java:797)
+	at javax.swing.plaf.metal.MetalTabbedPaneUI.paint(MetalTabbedPaneUI.java:843)
+	at javax.swing.plaf.metal.MetalTabbedPaneUI.update(MetalTabbedPaneUI.java:724)
+	at javax.swing.JComponent.paintComponent(JComponent.java:769)
+	at javax.swing.JComponent.printComponent(JComponent.java:1209)
+	at javax.swing.JComponent.paint(JComponent.java:1049)
+	at javax.swing.JComponent.print(JComponent.java:1191)
+	at javax.swing.JComponent.paintChildren(JComponent.java:882)
+	at javax.swing.JComponent.printChildren(JComponent.java:1222)
+	at javax.swing.JComponent.paint(JComponent.java:1057)
+	at javax.swing.JComponent.print(JComponent.java:1191)
+	at javax.swing.JComponent.paintChildren(JComponent.java:882)
+	at javax.swing.JComponent.printChildren(JComponent.java:1222)
+	at javax.swing.JComponent.paint(JComponent.java:1057)
+	at javax.swing.JComponent.print(JComponent.java:1191)
+	at javax.swing.JComponent.paintChildren(JComponent.java:882)
+	at javax.swing.JComponent.printChildren(JComponent.java:1222)
+	at javax.swing.JComponent.paint(JComponent.java:1057)
+	at javax.swing.JLayeredPane.paint(JLayeredPane.java:585)
+	at javax.swing.JComponent.print(JComponent.java:1191)
+	at javax.swing.JComponent.paintChildren(JComponent.java:882)
+	at javax.swing.JComponent.printChildren(JComponent.java:1222)
+	at javax.swing.JComponent.paint(JComponent.java:1057)
+	at javax.swing.JComponent.print(JComponent.java:1191)
+	at java.awt.GraphicsCallback$PrintCallback.run(GraphicsCallback.java:50)
+	at sun.awt.SunGraphicsCallback.runOneComponent(SunGraphicsCallback.java:78)
+	at sun.awt.SunGraphicsCallback.runComponents(SunGraphicsCallback.java:115)
+	at java.awt.Container.print(Container.java:2022)
+	at sun.awt.X11.XComponentPeer.print(XComponentPeer.java:453)
+	at sun.awt.X11.XPanelPeer.print(XPanelPeer.java:72)
+	at sun.awt.X11.XWindowPeer.print(XWindowPeer.java:2224)
+	at sun.awt.X11.XFramePeer.print(XFramePeer.java:421)
+	at java.awt.GraphicsCallback$PeerPrintCallback.run(GraphicsCallback.java:103)
+	at sun.awt.SunGraphicsCallback.runOneComponent(SunGraphicsCallback.java:78)
+	at java.awt.Component.printAll(Component.java:3435)
+	at org.eclipse.wb.internal.swing.utils.SwingScreenshotMaker.makeShots(SwingScreenshotMaker.java:123)
+	at org.eclipse.wb.internal.swing.model.component.ComponentInfo.refresh_fetch(ComponentInfo.java:155)
+	at org.eclipse.wb.internal.swing.model.component.ComponentInfo.refresh_fetch(ComponentInfo.java:140)
+	at org.eclipse.wb.internal.swing.model.component.ContainerInfo.refresh_fetch(ContainerInfo.java:251)
+	at org.eclipse.wb.core.model.ObjectInfo$6$1.run(ObjectInfo.java:496)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runDesignTime(ExecutionUtils.java:145)
+	at org.eclipse.wb.core.model.ObjectInfo$6.run(ObjectInfo.java:494)
+	at org.eclipse.wb.internal.swing.utils.SwingUtils$2.run(SwingUtils.java:76)
+	at org.eclipse.wb.internal.swing.utils.SwingUtils.invokeLaterAndWait(SwingUtils.java:180)
+	at org.eclipse.wb.internal.swing.utils.SwingUtils.runLaterAndWait(SwingUtils.java:73)
+	at org.eclipse.wb.internal.swing.model.component.ComponentInfo.execRefreshOperation(ComponentInfo.java:119)
+	at org.eclipse.wb.core.model.ObjectInfo.refresh(ObjectInfo.java:492)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:580)
+	at org.eclipse.wb.internal.core.editor.DesignPage.access$9(DesignPage.java:522)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4299)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1300)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1285)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1079)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:2746)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1433)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:257)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3562)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3186)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.wb.core 4 4 2014-10-10 01:40:40.665
+!MESSAGE Designer [1.7.0.r37x201405021445.201410100137]: org.eclipse.wb.internal.core.model.creation.ThisCreationSupport cannot be cast to org.eclipse.wb.internal.core.model.creation.ILiveCreationSupport
+!STACK 0
+java.lang.ClassCastException: org.eclipse.wb.internal.core.model.creation.ThisCreationSupport cannot be cast to org.eclipse.wb.internal.core.model.creation.ILiveCreationSupport
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.createClone(AbstractLiveManager.java:221)
+	at org.eclipse.wb.internal.swing.model.component.live.SwingLiveManager.createLiveComponent(SwingLiveManager.java:59)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.createCacheEntryEx(AbstractLiveManager.java:103)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.createCacheEntry(AbstractLiveManager.java:82)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.getCachedEntry(AbstractLiveManager.java:264)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.getCachedEntry(AbstractLiveManager.java:250)
+	at org.eclipse.wb.internal.swing.model.component.live.SwingLiveManager.getImage(SwingLiveManager.java:131)
+	at org.eclipse.wb.internal.swing.model.component.ComponentInfo.getLiveImage(ComponentInfo.java:259)
+	at org.eclipse.wb.core.model.AbstractComponentInfo.getImage(AbstractComponentInfo.java:165)
+	at org.eclipse.wb.core.gef.part.AbstractComponentEditPart$1.paintClientArea(AbstractComponentEditPart.java:91)
+	at org.eclipse.wb.draw2d.Figure.paintFigure(Figure.java:533)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:514)
+	at org.eclipse.wb.draw2d.Figure.paintChildren(Figure.java:552)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:516)
+	at org.eclipse.wb.draw2d.Figure.paintChildren(Figure.java:552)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:516)
+	at org.eclipse.wb.draw2d.Figure.paintChildren(Figure.java:552)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:516)
+	at org.eclipse.wb.internal.draw2d.FigureCanvas.handlePaint(FigureCanvas.java:188)
+	at org.eclipse.wb.internal.draw2d.FigureCanvas.access$2(FigureCanvas.java:160)
+	at org.eclipse.wb.internal.draw2d.FigureCanvas$3.handleEvent(FigureCanvas.java:150)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1300)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1285)
+	at org.eclipse.swt.widgets.Control.gtk_expose_event(Control.java:2992)
+	at org.eclipse.swt.widgets.Composite.gtk_expose_event(Composite.java:709)
+	at org.eclipse.swt.widgets.Canvas.gtk_expose_event(Canvas.java:167)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1769)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5116)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4377)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8317)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1193)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2342)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3184)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.ui 4 0 2014-10-10 01:45:12.929
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3537)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3189)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:480)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:417)
+	at org.eclipse.swt.widgets.Control.getShell(Control.java:2719)
+	at org.eclipse.wb.internal.core.model.property.table.HtmlTooltipHelper$4.run(HtmlTooltipHelper.java:295)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.wb.core 4 4 2014-10-10 02:02:00.576
+!MESSAGE Designer [1.7.0.r37x201405021445.201410100137]: org.eclipse.wb.internal.core.model.creation.ThisCreationSupport cannot be cast to org.eclipse.wb.internal.core.model.creation.ILiveCreationSupport
+!STACK 0
+java.lang.ClassCastException: org.eclipse.wb.internal.core.model.creation.ThisCreationSupport cannot be cast to org.eclipse.wb.internal.core.model.creation.ILiveCreationSupport
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.createClone(AbstractLiveManager.java:221)
+	at org.eclipse.wb.internal.swing.model.component.live.SwingLiveManager.createLiveComponent(SwingLiveManager.java:59)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.createCacheEntryEx(AbstractLiveManager.java:103)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.createCacheEntry(AbstractLiveManager.java:82)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.getCachedEntry(AbstractLiveManager.java:264)
+	at org.eclipse.wb.internal.core.model.util.live.AbstractLiveManager.getCachedEntry(AbstractLiveManager.java:250)
+	at org.eclipse.wb.internal.swing.model.component.live.SwingLiveManager.getImage(SwingLiveManager.java:131)
+	at org.eclipse.wb.internal.swing.model.component.ComponentInfo.getLiveImage(ComponentInfo.java:259)
+	at org.eclipse.wb.core.model.AbstractComponentInfo.getImage(AbstractComponentInfo.java:165)
+	at org.eclipse.wb.core.gef.part.AbstractComponentEditPart$1.paintClientArea(AbstractComponentEditPart.java:91)
+	at org.eclipse.wb.draw2d.Figure.paintFigure(Figure.java:533)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:514)
+	at org.eclipse.wb.draw2d.Figure.paintChildren(Figure.java:552)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:516)
+	at org.eclipse.wb.draw2d.Figure.paintChildren(Figure.java:552)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:516)
+	at org.eclipse.wb.draw2d.Figure.paintChildren(Figure.java:552)
+	at org.eclipse.wb.draw2d.Figure.paint(Figure.java:516)
+	at org.eclipse.wb.internal.draw2d.FigureCanvas.handlePaint(FigureCanvas.java:188)
+	at org.eclipse.wb.internal.draw2d.FigureCanvas.access$2(FigureCanvas.java:160)
+	at org.eclipse.wb.internal.draw2d.FigureCanvas$3.handleEvent(FigureCanvas.java:150)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1300)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1285)
+	at org.eclipse.swt.widgets.Control.gtk_expose_event(Control.java:2992)
+	at org.eclipse.swt.widgets.Composite.gtk_expose_event(Composite.java:709)
+	at org.eclipse.swt.widgets.Canvas.gtk_expose_event(Canvas.java:167)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1769)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5116)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4377)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8317)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1193)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2342)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3184)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2014-10-10 03:06:25.053
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for Help {key=Lcom/sun/corba/se/impl/activation/Help;} [in Help.class [in com.sun.corba.se.impl.activation [in /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:995)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:619)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:565)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:557)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2014-10-10 03:06:25.054
+!MESSAGE Timed out while retrieving the attached javadoc for Help {key=Lcom/sun/corba/se/impl/activation/Help;} [in Help.class [in com.sun.corba.se.impl.activation [in /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar]]] 
+!SESSION 2014-10-10 23:29:55.122 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 0 2014-10-10 23:32:06.190
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3537)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3189)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:480)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:417)
+	at org.eclipse.swt.widgets.Control.getShell(Control.java:2719)
+	at org.eclipse.wb.internal.core.model.property.table.HtmlTooltipHelper$4.run(HtmlTooltipHelper.java:295)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2014-10-11 00:47:25.391
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:4342)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.removeMouseMoveListener(Control.java:1989)
+	at org.eclipse.jface.text.AbstractInformationControl$5.mouseUp(AbstractInformationControl.java:403)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:220)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3562)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3186)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.ui 2 2 2014-10-11 02:23:56.283
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-10-12 02:22:00.939 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-10-12 02:22:03.542
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 0 2014-10-12 02:25:19.518
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTError: Cannot get item
+	at org.eclipse.swt.SWT.error(SWT.java:4387)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:480)
+	at org.eclipse.swt.widgets.Menu.getItem(Menu.java:443)
+	at org.eclipse.wb.internal.core.utils.ui.MenuManagerEx.fill(MenuManagerEx.java:72)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:741)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:822)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:474)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1300)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1281)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3604)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3176)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!SESSION 2014-10-12 02:26:28.553 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-10-12 02:26:31.448
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 0 2014-10-12 02:32:29.336
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.reflect.UndeclaredThrowableException
+	at com.sun.proxy.$Proxy1.mouseUp(Unknown Source)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:220)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3562)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3186)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor204.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.wb.internal.draw2d.EventManager$8.invoke(EventManager.java:325)
+	... 27 more
+Caused by: org.eclipse.core.runtime.AssertionFailedException: null argument:
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:85)
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:73)
+	at org.eclipse.wb.internal.gef.core.AbstractEditPartViewer.setSelection(AbstractEditPartViewer.java:249)
+	at org.eclipse.wb.gef.core.tools.PasteTool.selectAddedObjects(PasteTool.java:78)
+	at org.eclipse.wb.gef.core.tools.AbstractCreationTool.handleButtonUp(AbstractCreationTool.java:63)
+	at org.eclipse.wb.gef.core.tools.Tool.mouseUp(Tool.java:395)
+	at org.eclipse.wb.internal.gef.core.EditDomain.mouseUp(EditDomain.java:255)
+	at org.eclipse.wb.internal.gef.graphical.EditEventManager.mouseUp(EditEventManager.java:149)
+	... 31 more
+
+!ENTRY org.eclipse.ui 4 0 2014-10-12 03:21:51.150
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:4342)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.removeMouseMoveListener(Control.java:1989)
+	at org.eclipse.jface.text.AbstractInformationControl$5.mouseUp(AbstractInformationControl.java:403)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:220)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3562)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3186)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.ui 4 0 2014-10-12 04:01:22.461
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:4342)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.removeMouseMoveListener(Control.java:1989)
+	at org.eclipse.jface.text.AbstractInformationControl$5.mouseUp(AbstractInformationControl.java:403)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:220)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3562)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3186)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.ui 2 2 2014-10-12 04:36:47.969
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-10-12 13:08:38.521 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-10-12 14:57:19.858
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-10-13 03:28:44.229 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-10-13 03:40:54.078
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-10-13 06:18:55.891 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-10-13 06:19:24.119
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-10-14 03:03:09.627 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-10-14 03:06:30.519
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)

@@ -1,0 +1,77 @@
+package beta;
+
+import javax.swing.JPanel;
+
+import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
+
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JSlider;
+
+public class VideoScreen extends JPanel{
+	private EmbeddedMediaPlayerComponent mP;
+	private JLabel _videoTime;
+	private JSlider _progressSlider;
+	private MediaProgressChecker _checker;
+	
+	public VideoScreen() {
+		setSize(535,260);
+		setLayout(null);
+		
+		mP = MediaPlayer.getMediaPlayerComponent();
+		mP.setBounds(0,0,535,245);
+		add(mP);
+		
+		JPanel videoDetailPanel = new JPanel();
+		videoDetailPanel.setBackground(Color.BLACK);
+		videoDetailPanel.setBounds(0, 245, 535, 15);
+		add(videoDetailPanel);
+		videoDetailPanel.setLayout(null);
+		
+		_videoTime = new JLabel("00:00:00");
+		_videoTime.setHorizontalAlignment(SwingConstants.CENTER);
+		_videoTime.setForeground(Color.WHITE);
+		_videoTime.setBounds(0, 0, 70, 15);
+		videoDetailPanel.add(_videoTime);
+		
+		_progressSlider = new JSlider();
+		_progressSlider.setMaximum(76000);
+		_progressSlider.setValue(0);
+		_progressSlider.setBackground(Color.BLACK);
+		_progressSlider.setBounds(70, 0, 450, 15);
+		videoDetailPanel.add(_progressSlider);
+		
+		//to be moved
+		_checker = new MediaProgressChecker(this);
+		_checker.execute();
+	}
+
+	//method used by video progress checker to update progress bar of video
+	public void updateMediaProgress() {
+		_progressSlider.setValue((int)mP.getMediaPlayer().getTime());
+		String hs,ms,ss;
+		long time = mP.getMediaPlayer().getTime()/1000;
+		int hours = (int) time / 3600;
+		int remainder = (int) time - hours * 3600;
+		int mins = remainder / 60;
+		remainder = remainder - mins * 60;
+		int secs = remainder;
+		if (hours < 10) {
+			hs = "0" + hours;
+			} else {
+		    	hs = "" + hours;
+		    }
+			if (mins < 10) {
+				ms = "0" + mins;
+			} else {
+				ms = "" + mins;
+			}
+			if (secs < 10) {
+				ss = "0" + secs;
+			} else {
+				ss = "" + secs;
+			}
+		_videoTime.setText("   " + hs + ":" + ms + ":" + ss);
+		}
+}

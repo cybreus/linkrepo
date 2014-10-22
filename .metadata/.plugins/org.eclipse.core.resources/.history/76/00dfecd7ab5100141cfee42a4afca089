@@ -1,0 +1,267 @@
+package beta;
+
+import javax.swing.JPanel;
+import java.awt.CardLayout;
+import java.awt.Color;
+
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.File;
+
+public class FunctionPanel extends JPanel{
+	private JPanel selectedPanel;
+	private JPanel audioExtractPanel, audioRemovePanel, audioOverlayPanel, audioReplacePanel;
+	private JLabel fileLabel, statusLabel, status;
+	private JButton saveLocButton;
+	private JTextField outputTextField;
+	private CardLayout cardLayout;
+	private JTextField textField;
+	
+	private JRadioButton rdbtnExtract;
+	private JTextField audioFileTextField;
+	private JButton openAudioButton;
+	private JLabel selectAudioLabel;
+	
+	private File audioSaveFile;
+	
+	JPanel panel;
+	private JTextField textField_4;
+	
+	public FunctionPanel() {
+		setSize(790,165);
+		setLayout(new CardLayout(0, 0));
+		cardLayout = (CardLayout)this.getLayout();
+		
+		JPanel defaultFP = new JPanel();
+		add(defaultFP, "default");
+		
+		//---------AUDIO EXTRACT------------------//
+		
+		audioExtractPanel = new JPanel();
+		add(audioExtractPanel, "Audio1");
+		audioExtractPanel.setLayout(null);
+		
+		fileLabel = new JLabel("Please confirm the output:");
+		fileLabel.setBounds(12, 12, 238, 20);
+		audioExtractPanel.add(fileLabel);
+		
+		outputTextField = new JTextField();
+		outputTextField.setEditable(false);
+		outputTextField.setBounds(12, 36, 207, 20);
+		
+		saveLocButton = new JButton("New button");
+		saveLocButton.setBounds(225, 33, 25, 25);
+		saveLocButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				Operation.setSaveMedia(null);
+				if (selectedPanel == audioExtractPanel) {
+					outputTextField.setText(Operation.getSaveFileString("A"));
+				} else {
+					outputTextField.setText(Operation.getSaveFileString("V"));
+				}
+			}
+		});
+		audioExtractPanel.add(saveLocButton);
+		
+		statusLabel = new JLabel("Status:");
+		statusLabel.setBounds(12, 128, 70, 25);
+		audioExtractPanel.add(statusLabel);
+		
+		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.setBounds(12, 70, 238, 40);
+		btnConfirm.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				Operation.extractAudio(null, status);
+			}
+		});
+		audioExtractPanel.add(btnConfirm);
+		
+		status = new JLabel("confirming...");
+		status.setFont(new Font("Dialog", Font.PLAIN, 12));
+		status.setBounds(77, 128, 173, 25);
+		audioExtractPanel.add(status);
+		
+		//----------------------------------------//
+		//--------------AUDIO REMOVAL---------------//
+		
+		audioRemovePanel = new JPanel();
+		add(audioRemovePanel, "Audio2");
+		audioRemovePanel.setLayout(null);
+		
+		rdbtnExtract = new JRadioButton("Extract before remove");
+		rdbtnExtract.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (panel.isVisible()) {
+					panel.setVisible(false);
+				} else {
+					panel.setVisible(true);
+				}
+			}
+		});
+		rdbtnExtract.setBounds(290, 11, 238, 20);
+		audioRemovePanel.add(rdbtnExtract);
+		
+		panel = new JPanel();
+		panel.setBounds(290, 36, 238, 59);
+		panel.setVisible(false);
+		audioRemovePanel.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblAudioFileSave = new JLabel("Audio file save directory:");
+		lblAudioFileSave.setBounds(0, 0, 238, 20);
+		panel.add(lblAudioFileSave);
+		
+		textField = new JTextField();
+		textField.setEditable(false);
+		textField.setColumns(10);
+		textField.setBounds(0, 24, 207, 20);
+		panel.add(textField);
+		
+		JButton button_1 = new JButton("New button");
+		button_1.setBounds(213, 21, 25, 25);
+		button_1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				JFileChooser audioSaver = new JFileChooser();
+				audioSaver.setDialogTitle("Specify an audio file name for a directory...");
+				int response = audioSaver.showSaveDialog(null);
+				if (response == JFileChooser.APPROVE_OPTION) {
+					audioSaveFile = audioSaver.getSelectedFile();
+					textField.setText(audioSaveFile.getAbsolutePath() + ".mp3");
+				} else {
+					//cancelled
+				}
+			}
+		});
+		panel.add(button_1);
+		
+		JButton btnConfrim = new JButton("Confirm");
+		btnConfrim.setBounds(12, 70, 238, 40);
+		btnConfrim.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (rdbtnExtract.isSelected()) {
+					if (audioSaveFile != null) {
+						Operation.extractAudio(audioSaveFile, status);
+						Operation.removeAudio(status);
+					} else {
+						JOptionPane.showMessageDialog(null, "Specify directory to save the audio file!");
+					}
+				} else {
+					Operation.removeAudio(status);
+				}
+			}
+		});
+		audioRemovePanel.add(btnConfrim);
+		
+		//----------------------------------------------//
+		//-------------AUDIO OVERLAY-----------------------//
+		
+		audioOverlayPanel = new JPanel();
+		add(audioOverlayPanel, "Audio3");
+		audioOverlayPanel.setLayout(null);
+		
+		JButton button_3 = new JButton("Confirm");
+		button_3.setBounds(12, 70, 238, 40);
+		audioOverlayPanel.add(button_3);
+		
+		selectAudioLabel = new JLabel("Please select an audio file:");
+		selectAudioLabel.setBounds(290, 12, 238, 20);
+		
+		audioFileTextField = new JTextField();
+		audioFileTextField.setEditable(false);
+		audioFileTextField.setColumns(10);
+		audioFileTextField.setBounds(290, 36, 207, 20);
+		
+		openAudioButton = new JButton("New button");
+		openAudioButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				File audio = Operation.openAudio();
+				audioFileTextField.setText(audio.getName());
+			}
+		});
+		openAudioButton.setBounds(503, 33, 25, 25);
+		
+		//-------------------------------------------------//
+		//------------AUDIO REPLACE------------------------//
+		
+		audioReplacePanel = new JPanel();
+		add(audioReplacePanel, "Audio4");
+		audioReplacePanel.setLayout(null);
+		
+		JButton button_7 = new JButton("Confirm");
+		button_7.setBounds(12, 70, 238, 40);
+		button_7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Operation.replaceAudio(status);
+			}
+		});
+		audioReplacePanel.add(button_7);
+	}
+	
+	public void switchToDefault() {
+		cardLayout.show(this, "default");
+	}
+	
+	public void switchToA1() {
+		cardLayout.show(this, "Audio1");
+		outputTextField.setText(Operation.getSaveFileString("A"));
+		audioExtractPanel.add(outputTextField);
+		audioExtractPanel.add(fileLabel);
+		audioExtractPanel.add(saveLocButton);
+		audioExtractPanel.add(status);
+		audioExtractPanel.add(statusLabel);
+		selectedPanel = audioExtractPanel;
+	}
+	
+	public void switchToA2() {
+		cardLayout.show(this, "Audio2");
+		outputTextField.setText(Operation.getSaveFileString("V"));
+		audioRemovePanel.add(outputTextField);
+		audioRemovePanel.add(fileLabel);
+		audioRemovePanel.add(saveLocButton);
+		audioRemovePanel.add(status);
+		audioRemovePanel.add(statusLabel);
+		selectedPanel = audioRemovePanel;
+	}
+	
+	public void switchToA3() {
+		cardLayout.show(this, "Audio3");
+		outputTextField.setText(Operation.getSaveFileString("V"));
+		audioOverlayPanel.add(outputTextField);
+		audioOverlayPanel.add(fileLabel);
+		audioOverlayPanel.add(saveLocButton);
+		audioOverlayPanel.add(status);
+		audioOverlayPanel.add(statusLabel);
+		audioOverlayPanel.add(selectAudioLabel);
+		audioOverlayPanel.add(audioFileTextField);
+		audioOverlayPanel.add(openAudioButton);
+		selectedPanel = audioOverlayPanel;
+	}
+	
+	public void switchToA4() {
+		cardLayout.show(this, "Audio4");
+		outputTextField.setText(Operation.getSaveFileString("V"));
+		audioReplacePanel.add(outputTextField);
+		audioReplacePanel.add(fileLabel);
+		audioReplacePanel.add(saveLocButton);
+		audioReplacePanel.add(status);
+		audioReplacePanel.add(statusLabel);
+		audioReplacePanel.add(selectAudioLabel);
+		audioReplacePanel.add(audioFileTextField);
+		audioReplacePanel.add(openAudioButton);
+		selectedPanel = audioReplacePanel;
+	}
+}

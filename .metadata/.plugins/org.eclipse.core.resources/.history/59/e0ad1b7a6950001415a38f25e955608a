@@ -1,0 +1,108 @@
+package beta;
+
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JToolBar;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.File;
+
+public class SelectionPane extends JPanel{
+	private MainUI _hookedUI;
+	
+	JTabbedPane tabbedPane;
+	JPanel detailsPane, inputPanel, outputPanel;
+	JLabel fileNameLabel, fileSizeLabel, videoSignalLabel, audioSignalLabel;
+	
+	public SelectionPane(MainUI main) {
+		_hookedUI = main;
+		
+		setSize(240,300);
+		setBackground(Color.DARK_GRAY);
+		setLayout(null);
+		
+		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setSelectedIndex(-1);
+		tabbedPane.setToolTipText("");
+		tabbedPane.setBounds(0, 0, 240, 300);
+		add(tabbedPane);
+		
+		detailsPane = new JPanel();
+		tabbedPane.addTab("Details", null, detailsPane, null);
+		detailsPane.setLayout(null);
+		
+		inputPanel = new JPanel();
+		inputPanel.setBackground(new Color(0, 128, 0));
+		inputPanel.setBounds(0, 0, 235, 35);
+		detailsPane.add(inputPanel);
+		inputPanel.setLayout(null);
+		
+		JLabel labelInput = new JLabel("Input");
+		labelInput.setFont(new Font("Ubuntu Mono", Font.BOLD, 20));
+		labelInput.setForeground(new Color(255, 255, 255));
+		labelInput.setBounds(25, 0, 95, 35);
+		inputPanel.add(labelInput);
+		
+		JButton openButton = new JButton("New button");
+		openButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				File mediaFile = Operation.openMedia();
+				if (mediaFile != null) {
+					_hookedUI.setForMediaOpen(mediaFile);
+					fileNameLabel.setText("File: " + mediaFile.getName());
+				}
+			}
+		});
+		openButton.setBounds(170, 0, 35, 35);
+		inputPanel.add(openButton);
+		
+		fileNameLabel = new JLabel("File: ");
+		fileNameLabel.setBounds(10, 40, 215, 15);
+		detailsPane.add(fileNameLabel);
+		
+		outputPanel = new JPanel();
+		outputPanel.setBackground(new Color(255, 140, 0));
+		outputPanel.setBounds(0, 120, 235, 35);
+		detailsPane.add(outputPanel);
+		outputPanel.setLayout(null);
+		
+		JLabel labelOutput = new JLabel("Output\n");
+		labelOutput.setBackground(new Color(255, 140, 0));
+		labelOutput.setForeground(new Color(255, 255, 255));
+		labelOutput.setFont(new Font("Ubuntu Mono", Font.BOLD, 20));
+		labelOutput.setBounds(25, 0, 95, 35);
+		outputPanel.add(labelOutput);
+		
+		JButton saveButton = new JButton("New button");
+		saveButton.setBounds(170, 0, 35, 35);
+		outputPanel.add(saveButton);
+		
+		fileSizeLabel = new JLabel("Size: ");
+		fileSizeLabel.setBounds(10, 55, 215, 20);
+		detailsPane.add(fileSizeLabel);
+		
+		videoSignalLabel = new JLabel("Video: ");
+		videoSignalLabel.setBounds(10, 75, 215, 20);
+		detailsPane.add(videoSignalLabel);
+		
+		audioSignalLabel = new JLabel("Audio: ");
+		audioSignalLabel.setBounds(10, 95, 215, 20);
+		detailsPane.add(audioSignalLabel);
+		
+		JPanel audioPane = new JPanel();
+		audioPane.setBackground(Color.RED);
+		tabbedPane.addTab("Audio", null, audioPane, null);
+		
+		JPanel videoPane = new JPanel();
+		videoPane.setBackground(Color.ORANGE);
+		tabbedPane.addTab("Video", null, videoPane, null);
+		
+		JPanel otherPane = new JPanel();
+		otherPane.setBackground(Color.CYAN);
+		tabbedPane.addTab("Other", null, otherPane, null);
+	}
+}

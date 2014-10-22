@@ -1,0 +1,157 @@
+package beta;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
+import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
+
+public class Operation {
+	private static EmbeddedMediaPlayer _media;
+	private static String _type = "none";
+	private static File _openedFile;
+	private static String _saveLocation;
+	
+	public static File openMedia(SelectionPane pane) {
+		_media = MediaPlayer.getMediaPlayerComponent().getMediaPlayer();
+		JFileChooser mediaOpen = new JFileChooser();
+		mediaOpen.setFileSelectionMode(JFileChooser.FILES_ONLY);
+		int response = mediaOpen.showOpenDialog(null);
+		if (response == JFileChooser.APPROVE_OPTION) {
+			File mediaFile = mediaOpen.getSelectedFile();
+			String type = checkMedia(mediaFile);
+			if (type.equals("none")) {
+				JOptionPane.showMessageDialog(null, "File is not a media file, please select another!");
+			} else {
+				_openedFile = mediaFile;
+				String mediaPath = mediaFile.getAbsolutePath();
+				_media.startMedia(mediaPath);
+				_media.pause();
+				_media.setRepeat(true);
+				pane.setUpInputPane(mediaFile);
+				return mediaFile;
+			}
+		}
+		return null;
+	}
+	
+	public static File setSaveMedia(SelectionPane pane) {
+		if (_openedFile != null) {
+			JFileChooser mediaSave = new JFileChooser();
+			mediaSave.setDialogTitle("Specify an output file name in a directory...");
+			int response = mediaSave.showSaveDialog(null);
+			if (response == JFileChooser.APPROVE_OPTION) {
+				File saveFile = mediaSave.getSelectedFile();	
+				String dur = getFormattedTime(MediaPlayer.getMediaPlayerComponent()
+						.getMediaPlayer().getLength()/1000);
+				int index = _openedFile.getName().indexOf('.');
+				String mediaType = _openedFile.getName().substring(index);
+				_saveLocation = saveFile.getAbsolutePath();
+				pane.setUpOutputPane(saveFile,dur, mediaType);
+		}
+		} else {
+			JOptionPane.showMessageDialog(null, "Open a file before setting up a save directory!");
+		}
+		return null;
+	}
+	
+	public static String checkMedia(File mediaFile) {
+		String mediaPath = mediaFile.getAbsolutePath();
+		String command = "avconv -i " + mediaPath;
+		String prev = _type;
+		_type = "none";
+		
+		try {
+			ProcessBuilder fileCheckB = new ProcessBuilder("/bin/bash","-c",command);
+			fileCheckB.redirectErrorStream(true);
+			Process fileCheck = fileCheckB.start();
+				
+			InputStream processInput = fileCheck.getInputStream();
+			BufferedReader input = new BufferedReader(new InputStreamReader(processInput));
+			
+			String line;
+			while ((line = input.readLine()) != null) {
+				if (line.contains("Audio:")) {
+					if (_type.equals("Video")) {
+						_type = "VideoWAudio";
+					} else {
+						_type = "Audio";
+					}
+				}
+				if (line.contains("Video:") && line.contains("fps")) {
+					if (_type.equals("Audio")) {
+						_type = "VideoWAudio";
+					} else {
+						_type = "Video";
+					}
+				}
+			}
+		} catch (NullPointerException | IOException e) {
+			JOptionPane.showMessageDialog(null, "Error: Could not check file type!");		
+		}
+		
+		String fin = _type;
+		if (_type.equals("none")) {
+			_type = prev;
+		}
+		return fin;
+	}
+	
+	public static String getFileType() {
+		if (_type.equals("VideoWAudio")) {
+			return "Video";
+		} else if (_type.equals("Video")) {
+			return "Video without Audio";
+		} else if (_type.equals("Audio")) {
+			return "Audio";
+		} else {
+			return "";
+		}
+	}
+	
+	public static String getFormattedTime(long time) {
+		String formatTime = "";
+		String hs,ms,ss;
+		int hours = (int) time / 3600;
+		int remainder = (int) time - hours * 3600;
+		int mins = remainder / 60;
+		remainder = remainder - mins * 60;
+		int secs = remainder;
+		if (hours < 10) {
+			hs = "0" + hours;
+		} else {
+		    hs = "" + hours;
+		}
+		if (mins < 10) {
+			ms = "0" + mins;
+		} else {
+			ms = "" + mins;
+		}
+		if (secs < 10) {
+			ss = "0" + secs;
+		} else {
+			ss = "" + secs;
+		}
+		formatTime = hs + ":" + ms + ":" + ss;
+		return formatTime;
+	}
+	
+	public static String getShortSize(long size) {
+		String s = "";
+		if (size > 1000000000) {
+			s = (int)(size/1000000000) + "Gb";
+		} else if (size > 1000000) {
+			s = (int)(size/1000000) + "Mb";
+		} else if (size > 1000) {
+			s = (int)(size/1000) + "Kb";
+		} else {
+			s = size + "b";
+		}
+		return s;
+	}
+}

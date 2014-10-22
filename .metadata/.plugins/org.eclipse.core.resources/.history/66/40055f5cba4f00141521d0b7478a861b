@@ -1,0 +1,137 @@
+package beta;
+
+import javax.swing.JPanel;
+import javax.swing.JButton;
+
+import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class PlayBackPanel extends JPanel{
+	private JButton playpauseButton;
+	private JButton stopButton;
+	private JButton rewindButton;
+	private JButton fastfowardButton;
+	
+	
+	private EmbeddedMediaPlayer mediaPlayer;
+	private FastForwarder _ff;
+	private FastBackwarder _fb;
+	
+	private boolean _isFastForwarding = false;
+	private boolean _isFastBackwarding = false;
+	private boolean _isPaused = true;
+	
+	boolean first = true;
+	
+	public PlayBackPanel() {
+		setSize(245,35);
+		setLayout(null);
+		
+		mediaPlayer = MediaPlayer.getMediaPlayerComponent().getMediaPlayer();
+		
+		playpauseButton = new JButton("New button");
+		playpauseButton.setEnabled(false);
+		playpauseButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (_isPaused) {
+					if (_isFastForwarding) {
+						_ff.stop();
+						_isFastForwarding = false;
+					} else if (_isFastBackwarding) {
+						_fb.stop();
+						_isFastBackwarding = false;
+					}
+					setToPause();
+				} else {
+					setToPlay();
+				}
+			}
+		});
+		playpauseButton.setBounds(67, 0, 55, 35);
+		add(playpauseButton);
+		
+		stopButton = new JButton("New button");
+		stopButton.setEnabled(false);
+		stopButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!_isPaused) {
+					setToPlay();
+				}
+				if (_isFastForwarding) {
+					_ff.stop();
+					_isFastForwarding = false;
+				} else if (_isFastBackwarding) {
+					_fb.stop();
+					_isFastBackwarding = false;
+				}
+				mediaPlayer.setTime(0);
+			}
+		});
+		stopButton.setBounds(123, 0, 55, 35);
+		add(stopButton);
+		
+		rewindButton = new JButton("New button");
+		rewindButton.setEnabled(false);
+		rewindButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!_isPaused) {
+					setToPlay();
+				}
+				if (_isFastBackwarding) {
+					_fb.stop();
+					_isFastBackwarding = false;
+				} else {
+					if (_isFastForwarding) {
+						_ff.stop();
+						_isFastForwarding = false;
+					}
+					_fb = new FastBackwarder();
+					_fb.execute();
+					_isFastBackwarding = true;
+				}
+			}
+		});
+		rewindButton.setBounds(0, 0, 67, 35);
+		add(rewindButton);
+		
+		fastfowardButton = new JButton("New button");
+		fastfowardButton.setEnabled(false);
+		fastfowardButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!_isPaused) {
+					setToPlay();
+				}
+				if (_isFastForwarding) {
+					_ff.stop();
+					_isFastForwarding = false;
+				} else {
+					if (_isFastBackwarding) {
+						_fb.stop();
+						_isFastBackwarding = false;
+					}
+					_ff = new FastForwarder();
+					_ff.execute();
+					_isFastForwarding = true;
+				}
+			}
+		});
+		fastfowardButton.setBounds(178, 0, 67, 35);
+		add(fastfowardButton);
+	}
+	
+	private void setToPause() {
+		_isPaused = false;
+		mediaPlayer.play();
+	}
+	
+	private void setToPlay() {
+		_isPaused = true;
+		mediaPlayer.pause();
+	}
+	
+	public void setEnabled() {
+		
+	}
+}

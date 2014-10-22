@@ -1,0 +1,88 @@
+package beta;
+
+import javax.swing.JPanel;
+import java.awt.CardLayout;
+import java.awt.Color;
+import javax.swing.UIManager;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+
+public class FunctionPanel extends JPanel{
+	private JLabel fileLabel;
+	private JTextField outputTextField;
+	private CardLayout cardLayout;
+	private JTextField textField_1;
+	
+	public FunctionPanel() {
+		setSize(790,165);
+		setLayout(new CardLayout(0, 0));
+		
+		JPanel defaultFP = new JPanel();
+		add(defaultFP, "default");
+		
+		//---------AUDIO EXTRACT------------------//
+		
+		JPanel audioExtractPanel = new JPanel();
+		add(audioExtractPanel, "Audio1");
+		audioExtractPanel.setLayout(null);
+		
+		fileLabel = new JLabel("Please confirm the output:");
+		fileLabel.setBounds(12, 12, 238, 20);
+		audioExtractPanel.add(fileLabel);
+		
+		outputTextField = new JTextField();
+		outputTextField.setEditable(false);
+		outputTextField.setBounds(12, 36, 207, 20);
+		audioExtractPanel.add(outputTextField);
+		outputTextField.setColumns(10);
+		
+		JButton saveLocButton = new JButton("New button");
+		saveLocButton.setBounds(225, 33, 25, 25);
+		audioExtractPanel.add(saveLocButton);
+		
+		JLabel statusLabel = new JLabel("Status:");
+		statusLabel.setBounds(12, 122, 70, 25);
+		audioExtractPanel.add(statusLabel);
+		
+		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.setBounds(12, 70, 238, 40);
+		audioExtractPanel.add(btnConfirm);
+		
+		JLabel extractStatus = new JLabel("confirming...");
+		extractStatus.setFont(new Font("Dialog", Font.PLAIN, 12));
+		extractStatus.setBounds(77, 122, 173, 25);
+		audioExtractPanel.add(extractStatus);
+		
+		//----------------------------------------//
+		
+		cardLayout = (CardLayout)this.getLayout();
+		
+		JPanel audioRemovePanel = new JPanel();
+		add(audioRemovePanel, "Audio2");
+		audioRemovePanel.setLayout(null);
+		
+		JLabel label = new JLabel("Please confirm the output:");
+		label.setBounds(12, 12, 238, 20);
+		audioRemovePanel.add(label);
+		
+		textField_1 = new JTextField();
+		textField_1.setEditable(false);
+		textField_1.setColumns(10);
+		textField_1.setBounds(12, 36, 207, 20);
+		audioRemovePanel.add(textField_1);
+		
+		JButton button = new JButton("New button");
+		button.setBounds(225, 33, 25, 25);
+		audioRemovePanel.add(button);
+	}
+	
+	public void switchToDefault() {
+		cardLayout.show(this, "default");
+	}
+	
+	public void switchToA1() {
+		cardLayout.show(this, "Audio1");
+	}
+}

@@ -1,0 +1,12 @@
+package beta;
+
+import javax.swing.JPanel;
+import java.awt.CardLayout;
+
+public class FunctionPanel extends JPanel{
+	public FunctionPanel() {
+		setSize(790,165);
+		setLayout(new CardLayout(0, 0));
+	}
+	
+}

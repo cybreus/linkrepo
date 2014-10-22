@@ -1,0 +1,40 @@
+package beta;
+
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+
+public class ControlPanel extends JPanel{
+	private VideoScreen _videoScreen;
+	private PlayBackPanel _playBack;
+	private VolumePanel _volume;
+	private JLabel _fileName;
+	
+	public ControlPanel() {
+		setSize(545,300);
+		setLayout(null);
+		
+		_videoScreen = new VideoScreen();
+		_videoScreen.setLocation(5,5);
+		add(_videoScreen);
+		
+		_playBack = new PlayBackPanel();
+		_playBack.setLocation(150,265);
+		add(_playBack);
+		
+		_volume = new VolumePanel();
+		_volume.setLocation(395, 265);
+		add(_volume);
+		
+		_fileName = new JLabel("File: Prepix.mp4");
+		_fileName.setHorizontalAlignment(SwingConstants.LEFT);
+		_fileName.setBounds(5, 265, 145, 35);
+		add(_fileName);
+	}
+	
+	public void setFileName(String name) {
+		_fileName.setText("File: " + name);
+	}
+}

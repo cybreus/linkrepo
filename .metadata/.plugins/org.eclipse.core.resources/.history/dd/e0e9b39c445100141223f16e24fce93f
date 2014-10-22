@@ -1,0 +1,30 @@
+package beta;
+
+import javax.swing.JPanel;
+import java.awt.CardLayout;
+import java.awt.Color;
+
+public class FunctionPanel extends JPanel{
+	public FunctionPanel() {
+		setSize(790,165);
+		setLayout(new CardLayout(0, 0));
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.RED);
+		add(panel, "red");
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLUE);
+		add(panel_1, "blue");
+	}
+	
+	public void switchToRed() {
+		CardLayout hi = (CardLayout) this.getLayout();
+		hi.show(this, "red");
+	}
+	
+	public void switchToBlue() {
+		CardLayout hi = (CardLayout) this.getLayout();
+		hi.show(this, "blue");
+	}
+}

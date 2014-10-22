@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.event.AncestorListener"/>
+<fullyQualifiedTypeName name="javax.swing.event.ChangeListener"/>
+<fullyQualifiedTypeName name="javax.swing.SwingWorker"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+</qualifiedTypeNameHistroy>

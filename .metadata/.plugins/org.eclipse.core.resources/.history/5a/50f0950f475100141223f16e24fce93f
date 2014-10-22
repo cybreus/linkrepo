@@ -1,0 +1,68 @@
+package beta;
+
+import javax.swing.JPanel;
+import java.awt.CardLayout;
+import java.awt.Color;
+import javax.swing.UIManager;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+
+public class FunctionPanel extends JPanel{
+	private JTextField textField;
+	CardLayout cardLayout;
+	
+	public FunctionPanel() {
+		setSize(790,165);
+		setLayout(new CardLayout(0, 0));
+		
+		JPanel defaultFP = new JPanel();
+		add(defaultFP, "default");
+		
+		//---------AUDIO EXTRACT------------------//
+		
+		JPanel audioExtractPanel = new JPanel();
+		add(audioExtractPanel, "Audio1");
+		audioExtractPanel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Please confirm the output:");
+		lblNewLabel.setBounds(12, 12, 238, 20);
+		audioExtractPanel.add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setEditable(false);
+		textField.setBounds(12, 36, 207, 20);
+		audioExtractPanel.add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(225, 33, 25, 25);
+		audioExtractPanel.add(btnNewButton);
+		
+		JLabel lblStatus = new JLabel("Status:");
+		lblStatus.setBounds(12, 122, 70, 25);
+		audioExtractPanel.add(lblStatus);
+		
+		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.setBounds(12, 70, 238, 40);
+		audioExtractPanel.add(btnConfirm);
+		
+		JLabel lblConfirming = new JLabel("confirming...");
+		lblConfirming.setFont(new Font("Dialog", Font.PLAIN, 12));
+		lblConfirming.setBounds(77, 122, 173, 25);
+		audioExtractPanel.add(lblConfirming);
+		
+		//----------------------------------------//
+		
+		cardLayout = (CardLayout)this.getLayout();
+	}
+	
+	public void switchToDefault() {
+		cardLayout.show(this, "default");
+	}
+	
+	public void switchToA1() {
+		cardLayout.show(this, "Audio1");
+	}
+}
