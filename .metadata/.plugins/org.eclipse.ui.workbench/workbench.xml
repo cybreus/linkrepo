@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="30" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
-<window height="705" width="982" x="207" y="66">
+<window height="705" maximized="true" width="982" x="207" y="66">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -13,11 +13,11 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="204" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="208" y="30"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -39,29 +39,49 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.wb.core.guiEditor" name="MainUI.java" partName="MainUI.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/MainUI.java" title="MainUI.java" tooltip="VamixBeta/src/UI/MainUI.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/MainUI.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2409" selectionTopPixel="1105"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Operation.java" partName="Operation.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/FunctionWorker/Operation.java" title="Operation.java" tooltip="VamixBeta/src/FunctionWorker/Operation.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/FunctionWorker/Operation.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="761" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.wb.core.guiEditor" name="FunctionPanel.java" partName="FunctionPanel.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/FunctionPanel.java" title="FunctionPanel.java" tooltip="VamixBeta/src/UI/FunctionPanel.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/FunctionPanel.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2459" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.wb.core.guiEditor" name="SelectionPanel.java" partName="SelectionPanel.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/SelectionPanel.java" title="SelectionPanel.java" tooltip="VamixBeta/src/UI/SelectionPanel.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/SelectionPanel.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="915" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2409" selectionTopPixel="799"/>
 </editor>
 <editor id="org.eclipse.wb.core.guiEditor" name="VideoScreen.java" partName="VideoScreen.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/PlaybackControl/VideoScreen.java" title="VideoScreen.java" tooltip="VamixBeta/src/UI/PlaybackControl/VideoScreen.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/PlaybackControl/VideoScreen.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1727" selectionTopPixel="340"/>
+</editor>
+<editor id="org.eclipse.wb.core.guiEditor" name="PlayBackPanel.java" partName="PlayBackPanel.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/PlaybackControl/PlayBackPanel.java" title="PlayBackPanel.java" tooltip="VamixBeta/src/UI/PlaybackControl/PlayBackPanel.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/PlaybackControl/PlayBackPanel.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1008" selectionTopPixel="305"/>
+</editor>
+<editor id="org.eclipse.wb.core.guiEditor" name="SelectionPanel.java" partName="SelectionPanel.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/SelectionPanel.java" title="SelectionPanel.java" tooltip="VamixBeta/src/UI/SelectionPanel.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/SelectionPanel.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7314" selectionTopPixel="3213"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediaData.java" partName="MediaData.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/Storage/MediaData.java" title="MediaData.java" tooltip="VamixBeta/src/Storage/MediaData.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/Storage/MediaData.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="401" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediaPlayer.java" partName="MediaPlayer.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/Storage/MediaPlayer.java" title="MediaPlayer.java" tooltip="VamixBeta/src/Storage/MediaPlayer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/Storage/MediaPlayer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="608" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wb.core.guiEditor" name="FunctionPanel.java" partName="FunctionPanel.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/UI/FunctionPanel.java" title="FunctionPanel.java" tooltip="VamixBeta/src/UI/FunctionPanel.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/UI/FunctionPanel.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2322" selectionTopPixel="587"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Operation.java" partName="Operation.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/FunctionWorker/Operation.java" title="Operation.java" tooltip="VamixBeta/src/FunctionWorker/Operation.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/FunctionWorker/Operation.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1586" selectionTopPixel="269"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Converter.java" partName="Converter.java" path="/home/andy/Desktop/206/Assignments/Beta/VamixBeta/src/FunctionWorker/Converter.java" title="Converter.java" tooltip="VamixBeta/src/FunctionWorker/Converter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VamixBeta/src/FunctionWorker/Converter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1260" selectionTopPixel="552"/>
 </editor>
 </editors>
 <views>
@@ -71,13 +91,13 @@
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
 </viewState>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (27 items)"/>
+<category IMemento.internal.id="Warnings (16 items)"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="197" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
@@ -138,7 +158,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.wb.core.guiEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -292,7 +312,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.23754153" ratioLeft="286" ratioRight="918" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7505423" ratioLeft="692" ratioRight="230" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -324,173 +344,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/beta/FunctionPanel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/beta/MainUI.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/beta/ControlPanel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/beta/MediaProgressChecker.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/beta/SelectionPane.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/beta/Operation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/beta/SelectionPanel.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" org.eclipse.jdt.ui.ClassFileIdentifier="=VamixBeta/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;javax.swing(JOptionPane.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/UI/MainUI.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/UI/FunctionPanel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/UI/SelectionPanel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/Storage/Operation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/UI/ControlPanel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/FunctionWorker/SwingWorkers/Operation.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/FunctionWorker/Operation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/UI/PlaybackControl/VideoScreen.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/FunctionWorker/haha.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/VamixBeta/src/UI/SelectionPanel.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/Storage/MediaData.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/Storage/MediaPlayer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/VamixBeta/src/FunctionWorker/Converter.java"/>
 </editors>
-<item historyLabel="SelectionPane.java" index="4">
-<position info="not_deleted" x="6715" y="0"/>
-</item>
 <item historyLabel="FunctionPanel.java" index="0">
-<position info="not_deleted" x="1697" y="0"/>
+<position info="not_deleted" x="1094" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="9921" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="1570" y="0"/>
 </item>
-<item historyLabel="MediaProgressChecker.java" index="3">
-<position info="not_deleted" x="556" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="3453" y="0"/>
-</item>
-<item historyLabel="SelectionPane.java" index="4">
-<position info="not_deleted" x="6715" y="0"/>
-</item>
-<item historyLabel="SelectionPanel.java" index="6">
-<position info="not_deleted" x="798" y="0"/>
-</item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="3453" y="0"/>
-</item>
-<item historyLabel="JOptionPane.class" index="7">
+<item historyLabel="MediaPlayer.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="3453" y="0"/>
+<item historyLabel="MediaPlayer.java" index="4">
+<position info="not_deleted" x="645" y="0"/>
 </item>
-<item historyLabel="SelectionPanel.java" index="6">
-<position info="not_deleted" x="1025" y="0"/>
+<item historyLabel="MediaPlayer.java" index="4">
+<position info="not_deleted" x="608" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="2187" y="14"/>
-</item>
-<item historyLabel="MainUI.java" index="1">
-<position info="not_deleted" x="2032" y="0"/>
-</item>
-<item historyLabel="ControlPanel.java" index="2">
-<position/>
-</item>
-<item historyLabel="MainUI.java" index="1">
-<position info="not_deleted" x="923" y="14"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
 <item historyLabel="FunctionPanel.java" index="0">
-<position info="not_deleted" x="1337" y="0"/>
+<position info="not_deleted" x="5189" y="0"/>
 </item>
-<item historyLabel="SelectionPanel.java" index="6">
-<position info="not_deleted" x="1831" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
+</item>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
 </item>
 <item historyLabel="FunctionPanel.java" index="0">
-<position info="not_deleted" x="1032" y="0"/>
+<position info="not_deleted" x="984" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="2187" y="14"/>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
 </item>
-<item historyLabel="MainUI.java" index="1">
-<position info="not_deleted" x="923" y="14"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="1570" y="0"/>
 </item>
-<item historyLabel="MainUI.java" index="8">
-<position info="not_deleted" x="1050" y="0"/>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
 </item>
-<item historyLabel="MainUI.java" index="8">
-<position info="not_deleted" x="1453" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="1570" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="5">
-<position info="not_deleted" x="2187" y="14"/>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
 </item>
-<item historyLabel="MainUI.java" index="8">
-<position info="not_deleted" x="1453" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="ControlPanel.java" index="2">
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
+</item>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="331" y="0"/>
+</item>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
+</item>
+<item historyLabel="Operation.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MainUI.java" index="8">
-<position info="not_deleted" x="1453" y="0"/>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="1030" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="1081" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="1079" y="0"/>
+<item historyLabel="Converter.java" index="5">
+<position info="not_deleted" x="1753" y="0"/>
 </item>
-<item historyLabel="SelectionPanel.java" index="10">
-<position info="not_deleted" x="1881" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="10481" y="1171"/>
 </item>
-<item historyLabel="SelectionPanel.java" index="10">
-<position info="not_deleted" x="1879" y="0"/>
+<item historyLabel="Converter.java" index="5">
+<position info="not_deleted" x="1401" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="11">
-<position info="not_deleted" x="2214" y="14"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="1085" y="0"/>
+<item historyLabel="Converter.java" index="5">
+<position info="not_deleted" x="1260" y="0"/>
 </item>
-<item historyLabel="ControlPanel.java" index="12">
-<position info="not_deleted" x="364" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="1085" y="0"/>
+<item historyLabel="FunctionPanel.java" index="0">
+<position info="not_deleted" x="2322" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="13">
-<position info="not_deleted" x="2232" y="14"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="10355" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="13">
-<position info="not_deleted" x="2252" y="14"/>
+<item historyLabel="Converter.java" index="5">
+<position info="not_deleted" x="1260" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="14">
-<position info="not_deleted" x="761" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="VideoScreen.java" index="15">
-<position info="not_deleted" x="1740" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="10355" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="5144" y="0"/>
+<item historyLabel="FunctionPanel.java" index="0">
+<position info="not_deleted" x="2322" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="11">
-<position info="not_deleted" x="733" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="11">
-<position info="not_deleted" x="726" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="831" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="13">
-<position info="not_deleted" x="754" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="1314" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="13">
-<position info="not_deleted" x="774" y="0"/>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="7015" y="0"/>
 </item>
-<item historyLabel="haha.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="10355" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="14">
-<position info="not_deleted" x="774" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="1586" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="14">
-<position info="not_deleted" x="761" y="0"/>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="791" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="2883" y="0"/>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="5560" y="0"/>
 </item>
-<item historyLabel="Operation.java" index="14">
-<position info="not_deleted" x="761" y="0"/>
+<item historyLabel="FunctionPanel.java" index="0">
+<position info="not_deleted" x="2322" y="0"/>
 </item>
-<item historyLabel="FunctionPanel.java" index="9">
-<position info="not_deleted" x="2459" y="0"/>
+<item historyLabel="Operation.java" index="1">
+<position info="not_deleted" x="1586" y="0"/>
 </item>
-<item active="true" historyLabel="SelectionPanel.java" index="10">
-<position info="not_deleted" x="1892" y="0"/>
+<item historyLabel="FunctionPanel.java" index="0">
+<position info="not_deleted" x="2322" y="0"/>
+</item>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="7314" y="0"/>
+</item>
+<item historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="817" y="0"/>
+</item>
+<item historyLabel="SelectionPanel.java" index="2">
+<position info="not_deleted" x="7314" y="0"/>
+</item>
+<item active="true" historyLabel="MediaData.java" index="3">
+<position info="not_deleted" x="817" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -509,6 +518,33 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Converter.java" tooltip="VamixBeta/src/FunctionWorker/Converter.java">
+<persistable path="/VamixBeta/src/FunctionWorker/Converter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Operation.java" tooltip="VamixBeta/src/FunctionWorker/Operation.java">
+<persistable path="/VamixBeta/src/FunctionWorker/Operation.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="FunctionPanel.java" tooltip="VamixBeta/src/UI/FunctionPanel.java">
+<persistable path="/VamixBeta/src/UI/FunctionPanel.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediaPlayer.java" tooltip="VamixBeta/src/Storage/MediaPlayer.java">
+<persistable path="/VamixBeta/src/Storage/MediaPlayer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediaData.java" tooltip="VamixBeta/src/Storage/MediaData.java">
+<persistable path="/VamixBeta/src/Storage/MediaData.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="SelectionPanel.java" tooltip="VamixBeta/src/UI/SelectionPanel.java">
+<persistable path="/VamixBeta/src/UI/SelectionPanel.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UIhelper.java" tooltip="VamixBeta/src/UI/UIhelper.java">
+<persistable path="/VamixBeta/src/UI/UIhelper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="VolumePanel.java" tooltip="VamixBeta/src/UI/PlaybackControl/VolumePanel.java">
+<persistable path="/VamixBeta/src/UI/PlaybackControl/VolumePanel.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="PlayBackPanel.java" tooltip="VamixBeta/src/UI/PlaybackControl/PlayBackPanel.java">
+<persistable path="/VamixBeta/src/UI/PlaybackControl/PlayBackPanel.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="haha.java" tooltip="VamixBeta/src/FunctionWorker/haha.java">
 <persistable path="/VamixBeta/src/FunctionWorker/haha.java"/>
 </file>
@@ -526,33 +562,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediaProgressChecker.java" tooltip="VamixBeta/src/beta/MediaProgressChecker.java">
 <persistable path="/VamixBeta/src/beta/MediaProgressChecker.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FastForwarder.java" tooltip="VamixBeta/src/beta/FastForwarder.java">
-<persistable path="/VamixBeta/src/beta/FastForwarder.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FastBackwarder.java" tooltip="VamixBeta/src/beta/FastBackwarder.java">
-<persistable path="/VamixBeta/src/beta/FastBackwarder.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="VideoScreen.java" tooltip="VamixBeta/src/beta/VideoScreen.java">
-<persistable path="/VamixBeta/src/beta/VideoScreen.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadFrame.java" tooltip="VamixBeta/src/beta/DownloadFrame.java">
-<persistable path="/VamixBeta/src/beta/DownloadFrame.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Downloader.java" tooltip="VamixBeta/src/beta/Downloader.java">
-<persistable path="/VamixBeta/src/beta/Downloader.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="SelectionPane.java" tooltip="VamixBeta/src/beta/SelectionPane.java">
-<persistable path="/VamixBeta/src/beta/SelectionPane.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Logger.java" tooltip="VamixBeta/src/beta/Logger.java">
-<persistable path="/VamixBeta/src/beta/Logger.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TitleCreditGenerator.java" tooltip="VamixBeta/src/beta/TitleCreditGenerator.java">
-<persistable path="/VamixBeta/src/beta/TitleCreditGenerator.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TextManager.java" tooltip="VamixBeta/src/beta/TextManager.java">
-<persistable path="/VamixBeta/src/beta/TextManager.java"/>
 </file>
 </mruList>
 </workbench>

@@ -1,0 +1,27 @@
+package Storage;
+
+import java.io.File;
+
+import FunctionWorker.Converter;
+
+public class MediaData {
+	private static MediaData _data = new MediaData();
+	
+	private static String _filePath;
+	private static String _fileName;
+	private static long _rawFileLength;
+	private static long _rawFileSize;
+	private static String _fileLength;
+	private static String _fileSize;
+	private static String _fileType;
+	
+	public static void mediaDataInit(File file) {
+		_filePath = file.getAbsolutePath();
+		_fileName = file.getName();
+		_rawFileLength = MediaPlayer.getMediaPlayerNC().getLength();
+		_rawFileSize = file.length();
+		_fileLength = Converter.getFormattedTime(MediaPlayer.getMediaPlayerNC().getLength());
+		_fileSize = Converter.getFormatSize(file.length());
+		
+	}
+}

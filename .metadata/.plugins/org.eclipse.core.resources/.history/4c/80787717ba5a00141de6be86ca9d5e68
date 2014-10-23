@@ -1,0 +1,11 @@
+package Storage;
+
+public class MediaData {
+	private static MediaData data = new MediaData();
+	
+	private static String filePath;
+	private static String fileName;
+	private static long fileLength;
+	private static String fileSize;
+	private static String fileType;
+}

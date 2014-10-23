@@ -17,21 +17,19 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import FunctionWorker.Operation;
+import Storage.MediaData;
 import Storage.MediaPlayer;
 
 
 public class SelectionPanel extends JPanel{
-	private MainUI _hookedUI;
+	private static SelectionPanel _instance = new SelectionPanel();
 	
 	private JTabbedPane tabbedPane;
 	private JPanel detailsPane, inputPanel, outputPanel;
 	private JLabel fileNameLabel, fileSizeLabel, durationLabel, typeLabel;
 	private JLabel saveFileLabel, startTimeLabel, endTimeLabel;
 	
-	private SelectionPanel instance = this;
-	
-	public SelectionPanel(MainUI main) {
-		_hookedUI = main;
+	public SelectionPanel() {
 		
 		setSize(240,300);
 		setBackground(Color.DARK_GRAY);
@@ -49,7 +47,7 @@ public class SelectionPanel extends JPanel{
 					first = false;
 				} else {
 					saveFileLabel.setText("File: " + Operation.getSaveFileString("V"));
-					_hookedUI.setCard("default");
+					FunctionPanel.getFunctionPanel().switchToDefault();
 				}
 			}
 		});
@@ -73,14 +71,11 @@ public class SelectionPanel extends JPanel{
 		labelInput.setBounds(10, 0, 95, 35);
 		inputPanel.add(labelInput);
 		
-		JButton openButton = new JButton(new ImageIcon("./icons/openButton.png"));
-		openButton.setOpaque(false);
-		openButton.setContentAreaFilled(false);
-		openButton.setBorderPainted(false);
-		openButton.setFocusPainted(false);
+		JButton openButton = new JButton();
+		UIhelper.setButtonIcon(openButton, "openButton.png");
 		openButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Operation.openMedia(instance);
+				Operation.openMedia();
 			}
 		});
 		openButton.setBounds(170, 0, 35, 35);
@@ -103,14 +98,11 @@ public class SelectionPanel extends JPanel{
 		labelOutput.setBounds(10, 0, 95, 35);
 		outputPanel.add(labelOutput);
 		
-		JButton saveButton = new JButton(new ImageIcon("./icons/saveButton.png"));
-		saveButton.setOpaque(false);
-		saveButton.setContentAreaFilled(false);
-		saveButton.setBorderPainted(false);
-		saveButton.setFocusPainted(false);
+		JButton saveButton = new JButton();
+		UIhelper.setButtonIcon(saveButton, "saveButton.png");
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Operation.setSaveMedia(instance);
+				Operation.setSaveMedia();
 			}
 		});
 		saveButton.setBounds(170, 0, 35, 35);
@@ -156,7 +148,7 @@ public class SelectionPanel extends JPanel{
 		JButton audio1Btn = new JButton("Extract");
 		audio1Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				_hookedUI.setCard("Audio1");
+				FunctionPanel.getFunctionPanel().switchToA1();
 			}
 		});
 		audio1Btn.setBounds(12, 12, 211, 45);
@@ -165,7 +157,7 @@ public class SelectionPanel extends JPanel{
 		JButton audio2Btn = new JButton("Remove");
 		audio2Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				_hookedUI.setCard("Audio2");
+				FunctionPanel.getFunctionPanel().switchToA2();
 			}
 		});
 		audio2Btn.setBounds(12, 69, 211, 45);
@@ -175,7 +167,7 @@ public class SelectionPanel extends JPanel{
 		audio3Btn.setBounds(12, 126, 211, 45);
 		audio3Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				_hookedUI.setCard("Audio3");
+				FunctionPanel.getFunctionPanel().switchToA3();
 			}
 		});
 		audioPane.add(audio3Btn);
@@ -184,7 +176,7 @@ public class SelectionPanel extends JPanel{
 		audio4Btn.setBounds(12, 183, 211, 45);
 		audio4Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				_hookedUI.setCard("Audio4");
+				FunctionPanel.getFunctionPanel().switchToA4();
 			}
 		});
 		audioPane.add(audio4Btn);
@@ -206,7 +198,7 @@ public class SelectionPanel extends JPanel{
 		btnTrim.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				_hookedUI.setCard("Video3");
+				FunctionPanel.getFunctionPanel().switchToV3();
 			}
 		});
 		videoPane.add(btnTrim);
@@ -224,19 +216,22 @@ public class SelectionPanel extends JPanel{
 		btnDownload.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				_hookedUI.setCard("DL");
+				FunctionPanel.getFunctionPanel().switchToDL();
 			}
 		});
 		btnDownload.setBounds(12, 12, 211, 45);
 		otherPane.add(btnDownload);
 	}
 	
+	public static SelectionPanel getSelectionPanel() {
+		return _instance;
+	}
+	
 	public void setUpInputPane(File mediaFile) {
-		_hookedUI.setForMediaOpen(mediaFile);
-		fileNameLabel.setText("File: " + mediaFile.getName());
-		fileSizeLabel.setText("Size: " + Operation.getShortSize(mediaFile.length()));
-		durationLabel.setText("Duration: " + Operation.getFormattedTime
-				(MediaPlayer.getMediaPlayerComponent().getMediaPlayer().getLength()/1000));
+		ControlPanel.getControlPanel().setForMediaOpen(mediaFile);
+		fileNameLabel.setText("File: " + MediaData.getFileName());
+		fileSizeLabel.setText("Size: " + MediaData.getFileSize());
+		durationLabel.setText("Duration: " + MediaData.getFileLength());
 		typeLabel.setText("Type: " + Operation.getFileType());
 	}
 	

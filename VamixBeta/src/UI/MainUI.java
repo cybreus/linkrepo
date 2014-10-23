@@ -34,15 +34,15 @@ public class MainUI extends JFrame{
 		getContentPane().setBackground(Color.DARK_GRAY);
 		getContentPane().setLayout(null);
 		
-		selection = new SelectionPanel(this);
+		selection = SelectionPanel.getSelectionPanel();
 		selection.setLocation(5,5);
 		getContentPane().add(selection);
 		
-		control = new ControlPanel();
+		control = ControlPanel.getControlPanel();
 		control.setLocation(250,5);
 		getContentPane().add(control);
 		
-		functions = new FunctionPanel();
+		functions = FunctionPanel.getFunctionPanel();
 		functions.setLocation(5, 310);
 		getContentPane().add(functions);
 		
@@ -58,7 +58,7 @@ public class MainUI extends JFrame{
 		JMenuItem mntmOpen = new JMenuItem("Open");
 		mntmOpen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				File media = Operation.openMedia(selection);
+				File media = Operation.openMedia();
 				if (media != null) {
 					setForMediaOpen(media);
 				}
@@ -95,23 +95,5 @@ public class MainUI extends JFrame{
 	
 	public void setForMediaOpen(File mediaFile) {
 		control.setForMediaOpen(mediaFile);
-	}
-
-	public void setCard(String string) {
-		if (string.equals("Audio1")) {
-			functions.switchToA1();
-		} else if (string.equals("Audio2")) {
-			functions.switchToA2();
-		} else if (string.equals("Audio3")) {
-			functions.switchToA3();
-		} else if (string.equals("Audio4")) {
-			functions.switchToA4();
-		} else if (string.equals("Video3")) {
-			functions.switchToV3();
-		} else if (string.equals("DL")) {
-			functions.switchToDL();
-		} else {
-			functions.switchToDefault();
-		}
 	}
 }

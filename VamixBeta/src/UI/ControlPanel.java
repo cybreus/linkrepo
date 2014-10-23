@@ -14,6 +14,8 @@ import UI.PlaybackControl.VolumePanel;
 
 
 public class ControlPanel extends JPanel{
+	private static ControlPanel _instance = new ControlPanel();
+	
 	private VideoScreen _videoScreen;
 	private PlayBackPanel _playBack;
 	private VolumePanel _volume;
@@ -39,6 +41,10 @@ public class ControlPanel extends JPanel{
 		_fileName.setHorizontalAlignment(SwingConstants.LEFT);
 		_fileName.setBounds(5, 265, 145, 35);
 		add(_fileName);
+	}
+	
+	public static ControlPanel getControlPanel() {
+		return _instance;
 	}
 	
 	public void setForMediaOpen(File file) {

@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JSlider;
 
+import resources.ResourceLoader;
 import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
 
 
@@ -14,6 +15,7 @@ import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
 
 import Storage.MediaPlayer;
+import UI.UIhelper;
 
 public class VolumePanel extends JPanel{
 	private EmbeddedMediaPlayer mediaPlayer;
@@ -28,20 +30,17 @@ public class VolumePanel extends JPanel{
 		
 		mediaPlayer = MediaPlayer.getMediaPlayerComponent().getMediaPlayer();
 		
-		_muteButton = new JButton(new ImageIcon("./icons/notMuteButton.png"));
-		_muteButton.setOpaque(false);
-		_muteButton.setContentAreaFilled(false);
-		_muteButton.setBorderPainted(false);
-		_muteButton.setFocusPainted(false);
+		_muteButton = new JButton();
+		UIhelper.setButtonIcon(_muteButton, "notMuteButton.png");
 		_muteButton.setEnabled(false);
 		_muteButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mediaPlayer.mute();
 				if (_isMuted) {
-					_muteButton.setIcon(new ImageIcon("./icons/notMuteButton.png"));
+					UIhelper.setButtonIcon(_muteButton, "notMuteButton.png");
 					_isMuted = false;
 				} else {
-					_muteButton.setIcon(new ImageIcon("./icons/muteButton.png"));
+					UIhelper.setButtonIcon(_muteButton, "muteButton.png");
 					_isMuted = true;
 				}
 			}

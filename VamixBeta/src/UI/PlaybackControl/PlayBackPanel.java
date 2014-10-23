@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import FunctionWorker.SwingWorkers.FastBackwarder;
 import FunctionWorker.SwingWorkers.FastForwarder;
 import Storage.MediaPlayer;
+import UI.UIhelper;
 
 import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
 
@@ -28,8 +29,6 @@ public class PlayBackPanel extends JPanel{
 	private boolean _isFastBackwarding = false;
 	private boolean _isPaused = true;
 	
-	private String iconFolder = "./icons/";
-	
 	boolean first = true;
 	
 	public PlayBackPanel() {
@@ -38,11 +37,8 @@ public class PlayBackPanel extends JPanel{
 		
 		mediaPlayer = MediaPlayer.getMediaPlayerComponent().getMediaPlayer();
 		
-		playpauseButton = new JButton(new ImageIcon(iconFolder + "plyButton.png"));
-		playpauseButton.setOpaque(false);
-		playpauseButton.setContentAreaFilled(false);
-		playpauseButton.setBorderPainted(false);
-		playpauseButton.setFocusPainted(false);
+		playpauseButton = new JButton();
+		UIhelper.setButtonIcon(playpauseButton, "plyButton.png");
 		playpauseButton.setEnabled(false);
 		playpauseButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -63,11 +59,8 @@ public class PlayBackPanel extends JPanel{
 		playpauseButton.setBounds(67, 0, 55, 35);
 		add(playpauseButton);
 		
-		stopButton = new JButton(new ImageIcon(iconFolder + "stopButton.png"));
-		stopButton.setOpaque(false);
-		stopButton.setContentAreaFilled(false);
-		stopButton.setBorderPainted(false);
-		stopButton.setFocusPainted(false);
+		stopButton = new JButton();
+		UIhelper.setButtonIcon(stopButton, "stopButton.png");
 		stopButton.setEnabled(false);
 		stopButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -87,11 +80,8 @@ public class PlayBackPanel extends JPanel{
 		stopButton.setBounds(123, 0, 55, 35);
 		add(stopButton);
 		
-		rewindButton = new JButton(new ImageIcon(iconFolder + "rewindButton.png"));
-		rewindButton.setOpaque(false);
-		rewindButton.setContentAreaFilled(false);
-		rewindButton.setBorderPainted(false);
-		rewindButton.setFocusPainted(false);
+		rewindButton = new JButton();
+		UIhelper.setButtonIcon(rewindButton, "rewindButton.png");
 		rewindButton.setEnabled(false);
 		rewindButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -115,11 +105,8 @@ public class PlayBackPanel extends JPanel{
 		rewindButton.setBounds(0, 0, 67, 35);
 		add(rewindButton);
 		
-		fastforwardButton = new JButton(new ImageIcon(iconFolder + "ffButton.png"));
-		fastforwardButton.setOpaque(false);
-		fastforwardButton.setContentAreaFilled(false);
-		fastforwardButton.setBorderPainted(false);
-		fastforwardButton.setFocusPainted(false);
+		fastforwardButton = new JButton();
+		UIhelper.setButtonIcon(fastforwardButton, "ffButton.png");
 		fastforwardButton.setEnabled(false);
 		fastforwardButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -146,13 +133,13 @@ public class PlayBackPanel extends JPanel{
 	
 	private void setToPause() {
 		_isPaused = false;
-		playpauseButton.setIcon(new ImageIcon(iconFolder + "pauseButton.png"));
+		UIhelper.setButtonIcon(playpauseButton, "pauseButton.png");
 		mediaPlayer.play();
 	}
 	
 	private void setToPlay() {
 		_isPaused = true;
-		playpauseButton.setIcon(new ImageIcon(iconFolder + "plyButton.png"));
+		UIhelper.setButtonIcon(playpauseButton, "plyButton.png");
 		mediaPlayer.pause();
 	}
 	

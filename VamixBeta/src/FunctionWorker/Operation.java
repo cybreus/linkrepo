@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 
+import Storage.MediaData;
 import Storage.MediaPlayer;
 import UI.SelectionPanel;
 
@@ -26,7 +27,7 @@ public class Operation {
 	private static File _audioFile;
 	
 	//method called for opening a media file to play
-	public static File openMedia(SelectionPanel pane) {
+	public static File openMedia() {
 		_media = MediaPlayer.getMediaPlayerComponent().getMediaPlayer();
 		JFileChooser mediaOpen = new JFileChooser();
 		mediaOpen.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -42,7 +43,8 @@ public class Operation {
 				_media.startMedia(mediaPath);
 				_media.pause();
 				_media.setRepeat(true);
-				pane.setUpInputPane(mediaFile);
+				MediaData.mediaDataInit(mediaFile, _type);
+				SelectionPanel.getSelectionPanel().setUpInputPane(mediaFile);
 				return mediaFile;
 			}
 		}
@@ -68,7 +70,7 @@ public class Operation {
 	}
 	
 	//method called to set output save file
-	public static File setSaveMedia(SelectionPanel pane) {
+	public static File setSaveMedia() {
 		if (_openedFile != null) {
 			JFileChooser mediaSave = new JFileChooser();
 			mediaSave.setDialogTitle("Specify an output file name in a directory...");
@@ -81,9 +83,9 @@ public class Operation {
 				mediaType = _openedFile.getName().substring(index);
 				String fullFileName = saveFile.getAbsolutePath();
 				_saveLocation = new File(fullFileName);
-				if (pane != null) {
+				if (SelectionPanel.getSelectionPanel() != null) {
 					//should change later, so that Operation keeps duration as a separate variable
-					pane.setUpOutputPane(dur);
+					SelectionPanel.getSelectionPanel().setUpOutputPane(dur);
 				}
 		}
 		} else {

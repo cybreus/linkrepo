@@ -47,6 +47,8 @@ public class FunctionPanel extends JPanel{
 	private JTextField textField_1;
 	private JRadioButton rdbtnSelectIfOpensource;
 	
+	private static FunctionPanel _instance = new FunctionPanel();
+	
 	public FunctionPanel() {
 		setSize(790,165);
 		setLayout(new CardLayout(0, 0));
@@ -74,7 +76,7 @@ public class FunctionPanel extends JPanel{
 		saveLocButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				Operation.setSaveMedia(null);
+				Operation.setSaveMedia();
 				if (selectedPanel == audioExtractPanel) {
 					outputTextField.setText(Operation.getSaveFileString("A"));
 				} else {
@@ -319,6 +321,10 @@ public class FunctionPanel extends JPanel{
 		JButton btnDownload = new JButton("Download");
 		btnDownload.setBounds(12, 98, 232, 55);
 		downloadPanel.add(btnDownload);
+	}
+	
+	public static FunctionPanel getFunctionPanel() {
+		return _instance;
 	}
 	
 	public void switchToDefault() {

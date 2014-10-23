@@ -1,0 +1,14 @@
+package UI;
+
+import javax.swing.JButton;
+
+public class UIhelper {
+	
+	public static void setButtonIcon(JButton button, String fileName) {
+		button = new JButton(new ImageIcon(ResourceLoader.getImage("notMuteButton.png")));
+		button.setOpaque(false);
+		button.setContentAreaFilled(false);
+		button.setBorderPainted(false);
+		button.setFocusPainted(false);
+	}
+}
