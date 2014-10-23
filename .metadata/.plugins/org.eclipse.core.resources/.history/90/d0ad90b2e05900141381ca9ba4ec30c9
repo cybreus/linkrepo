@@ -1,0 +1,174 @@
+package UI;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+
+import beta.FastBackwarder;
+import beta.FastForwarder;
+import beta.MediaPlayer;
+
+import uk.co.caprica.vlcj.player.embedded.EmbeddedMediaPlayer;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class PlayBackPanel extends JPanel{
+	private JButton playpauseButton;
+	private JButton stopButton;
+	private JButton rewindButton;
+	private JButton fastforwardButton;
+	
+	
+	private EmbeddedMediaPlayer mediaPlayer;
+	private FastForwarder _ff;
+	private FastBackwarder _fb;
+	
+	private boolean _isFastForwarding = false;
+	private boolean _isFastBackwarding = false;
+	private boolean _isPaused = true;
+	
+	private String iconFolder = "./icons/";
+	
+	boolean first = true;
+	
+	public PlayBackPanel() {
+		setSize(245,35);
+		setLayout(null);
+		
+		mediaPlayer = MediaPlayer.getMediaPlayerComponent().getMediaPlayer();
+		
+		playpauseButton = new JButton(new ImageIcon(iconFolder + "plyButton.png"));
+		playpauseButton.setOpaque(false);
+		playpauseButton.setContentAreaFilled(false);
+		playpauseButton.setBorderPainted(false);
+		playpauseButton.setFocusPainted(false);
+		playpauseButton.setEnabled(false);
+		playpauseButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (_isPaused) {
+					if (_isFastForwarding) {
+						_ff.stop();
+						_isFastForwarding = false;
+					} else if (_isFastBackwarding) {
+						_fb.stop();
+						_isFastBackwarding = false;
+					}
+					setToPause();
+				} else {
+					setToPlay();
+				}
+			}
+		});
+		playpauseButton.setBounds(67, 0, 55, 35);
+		add(playpauseButton);
+		
+		stopButton = new JButton(new ImageIcon(iconFolder + "stopButton.png"));
+		stopButton.setOpaque(false);
+		stopButton.setContentAreaFilled(false);
+		stopButton.setBorderPainted(false);
+		stopButton.setFocusPainted(false);
+		stopButton.setEnabled(false);
+		stopButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!_isPaused) {
+					setToPlay();
+				}
+				if (_isFastForwarding) {
+					_ff.stop();
+					_isFastForwarding = false;
+				} else if (_isFastBackwarding) {
+					_fb.stop();
+					_isFastBackwarding = false;
+				}
+				mediaPlayer.setTime(0);
+			}
+		});
+		stopButton.setBounds(123, 0, 55, 35);
+		add(stopButton);
+		
+		rewindButton = new JButton(new ImageIcon(iconFolder + "rewindButton.png"));
+		rewindButton.setOpaque(false);
+		rewindButton.setContentAreaFilled(false);
+		rewindButton.setBorderPainted(false);
+		rewindButton.setFocusPainted(false);
+		rewindButton.setEnabled(false);
+		rewindButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!_isPaused) {
+					setToPlay();
+				}
+				if (_isFastBackwarding) {
+					_fb.stop();
+					_isFastBackwarding = false;
+				} else {
+					if (_isFastForwarding) {
+						_ff.stop();
+						_isFastForwarding = false;
+					}
+					_fb = new FastBackwarder();
+					_fb.execute();
+					_isFastBackwarding = true;
+				}
+			}
+		});
+		rewindButton.setBounds(0, 0, 67, 35);
+		add(rewindButton);
+		
+		fastforwardButton = new JButton(new ImageIcon(iconFolder + "ffButton.png"));
+		fastforwardButton.setOpaque(false);
+		fastforwardButton.setContentAreaFilled(false);
+		fastforwardButton.setBorderPainted(false);
+		fastforwardButton.setFocusPainted(false);
+		fastforwardButton.setEnabled(false);
+		fastforwardButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!_isPaused) {
+					setToPlay();
+				}
+				if (_isFastForwarding) {
+					_ff.stop();
+					_isFastForwarding = false;
+				} else {
+					if (_isFastBackwarding) {
+						_fb.stop();
+						_isFastBackwarding = false;
+					}
+					_ff = new FastForwarder();
+					_ff.execute();
+					_isFastForwarding = true;
+				}
+			}
+		});
+		fastforwardButton.setBounds(178, 0, 67, 35);
+		add(fastforwardButton);
+	}
+	
+	private void setToPause() {
+		_isPaused = false;
+		playpauseButton.setIcon(new ImageIcon(iconFolder + "pauseButton.png"));
+		mediaPlayer.play();
+	}
+	
+	private void setToPlay() {
+		_isPaused = true;
+		playpauseButton.setIcon(new ImageIcon(iconFolder + "plyButton.png"));
+		mediaPlayer.pause();
+	}
+	
+	public void setEnabled() {
+		playpauseButton.setEnabled(true);
+		stopButton.setEnabled(true);
+		rewindButton.setEnabled(true);
+		fastforwardButton.setEnabled(true);
+		if (_ff != null && !_ff.isDone()) {
+			_ff.stop();
+			_isFastForwarding = false;
+		}
+		if (_fb != null && !_fb.isDone()) {
+			_fb.stop();
+			_isFastBackwarding = false;
+		}
+		_isPaused = true;
+	}
+}

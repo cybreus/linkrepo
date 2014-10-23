@@ -3,18 +3,19 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="330" key="DIALOG_WIDTH"/>
 		<item value="191" key="DIALOG_Y_ORIGIN"/>
+		<item value="885" key="DIALOG_X_ORIGIN"/>
 		<item value="484" key="DIALOG_HEIGHT"/>
-		<item value="905" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="true" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wholeword"/>
-		<item value="textField_4" key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="SelectionPane"/>
 			<item value="textField_4"/>
 			<item value="textField_1"/>
 			<item value="txtFffff"/>
@@ -22,9 +23,9 @@
 			<item value="btnNewButton"/>
 			<item value="openButton"/>
 			<item value="button_4"/>
-			<item value="textField_3"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SelectionPanel"/>
 			<item value="endTimeTextField"/>
 			<item value="startTimeTextField"/>
 			<item value="endTimeGetTime"/>
@@ -32,7 +33,6 @@
 			<item value="saveButton"/>
 			<item value="openAudioButton"/>
 			<item value="audioF"/>
-			<item value="audioFileTextField"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
